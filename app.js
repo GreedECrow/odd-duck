@@ -109,3 +109,44 @@ const wine = new Product("wine glass", "image/wine-glass.jpg");
 renderProducts();
 
 productContainer.addEventListener("click", handleProductClick);
+
+function renderChart() {
+    const productNames = [];
+    const productViews = [];
+    const productClicks = [];
+
+    for (let i = 0; i < allProducts[i].length; i++) {
+        productNames.push(allProducts[i].name);
+        productViews.push(allProducts[i].views);
+        productClicks.push(allProducts[i].clicks);
+
+    }
+
+    const data = {
+        labels: productNames,
+        datasets: [
+            {
+                label: "clicks",
+                data: productClicks,
+                backgroundColor: ["#42032C"],
+                borderColor: ["#D36B00"],
+                borderWidth: 1,
+            },
+            {
+                label: "views",
+                data: productViews,
+                backgroundColor: ["#D36B00"],
+                borderColor: ["#42032C"],
+                borderWidth: 1,
+            },
+        ]
+    };
+
+    const config = {
+        type: "bar",
+        data: data,
+    };
+
+    const productChart = document.getElementById("chart");
+    const myChart = new Chart(productChart, config);
+}
