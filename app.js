@@ -29,9 +29,14 @@ function renderProducts() {
     let product2 = getRandomNumber();
     let product3 = getRandomNumber();
 
-    while (product1 === product2 || product1 === product3) {
+    while (product2 === product1 || product2 === product3) {
         product2 = getRandomNumber();
-        console.log(hello)
+        console.log("hello");
+    }
+
+    while (product3 === product2 || product3 === product1) {
+        product3 = getRandomNumber();
+        console.log("hello2");
     }
 
 
@@ -55,14 +60,14 @@ function handleProductClick(event) {
         let clickedProduct = event.target.alt;
         for (let i = 0; i < allProducts.length; i++) {
             if (clickedProduct === allProducts[i].name) {
-                allProducts[i].clicks++;
+                allProducts[i].click++;
                 break;
             }
         }
         if (clicks === maxClicksAllowed) {
             productContainer.removeEventListener("click", handleProductClick);
             productContainer.className = "no-voting";
-            resultsButton.addEventListener("click, renderResults");
+            resultsButton.addEventListener("click", renderResults);
             resultsButton.className = "clicks allowed";
 
         } else {
@@ -76,7 +81,7 @@ function renderResults() {
     let ul = document.querySelector("ul");
     for (let i = 0; i < allProducts.length; i++) {
         let li = document.createElement("li");
-        li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].clicks} times.`;
+        li.textContent = `${allProducts[i].name} had ${allProducts[i].views} views and was clicked ${allProducts[i].click} times.`;
         ul.appendChild(li);
     }
 }
@@ -88,7 +93,7 @@ const boots = new Product("boots", "image/boots.jpg");
 const breakfast = new Product("breakfast", "image/breakfast.jpg");
 const bubblegum = new Product("bubblegum", "image/bubblegum.jpg");
 const chair = new Product("chair", "image/chair.jpg");
-const chtulhu = new Product("chtulhu", "image/chtulhu.jpg");
+const cthulhu = new Product("cthulhu", "image/cthulhu.jpg");
 const dog = new Product("dog duck", "image/dog-duck.jpg");
 const dragon = new Product("dragon", "image/dragon.jpg");
 const pen = new Product("pen", "image/pen.jpg");

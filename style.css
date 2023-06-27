@@ -11,10 +11,9 @@ header {
 }
 
 main {
-
     display: grid;
-    grid-template-columns: 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
 
@@ -23,17 +22,22 @@ section {
 }
 
 section {
+    
+   
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
-    grid-column-end: 3;
-    width: 100%;
+    grid-column-end: 4;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
 
 }
 
-img {}
+img {
+    max-width: 30%;
+    display: block;
+}
 
 footer {
     background-color: yellowgreen;
