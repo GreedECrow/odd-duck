@@ -29,9 +29,12 @@ function renderProducts() {
     let product2 = getRandomNumber();
     let product3 = getRandomNumber();
 
-    while (product1 === product2 || product3) {
-        product2 && product3; getRandomNumber();
+    while (product1 === product2 || product1 === product3) {
+        product2 = getRandomNumber();
+        console.log(hello)
     }
+
+
 
     image1.src = allProducts[product1].src;
     image2.src = allProducts[product2].src;
@@ -78,24 +81,26 @@ function renderResults() {
     }
 }
 
-const bag = new Product("bag", "images/bag.jpg");
-const banana = new Product("banana", "images/banana.jpg");
-const bathroom = new Product("bathroom", "images/bathroom.jpg");
-const boots = new Product("boots", "images/boots.jpg");
-const breakfast = new Product("breakfast", "images/breakfast.jpg");
-const bubblegum = new Product("bubblegum", "images/bubblegum.jpg");
-const chair = new Product("chair", "images/chair.jpg");
-const chtulhu = new Product("chtulhu", "images/chtulhu.jpg");
-const dog = new Product("dog duck", "images/dog-duck.jpg");
-const dragon = new Product("dragon", "images/dragon.jpg");
-const pen = new Product("pen", "images/pen.jpg");
-const pet = new Product("pet sweep", "images/pet-sweep.jpg");
-const scissors = new Product("scissors", "images/scissors.jpg");
-const shark = new Product("shark", "images/shark.jpg");
-const sweep = new Product("Sweep", "images/sweep-goat.jpg");
-const tauntaun = new Product("tauntaun", "images/tauntaun.jpg");
-const unicorn = new Product("unicorn", "images/unicorn.jpg");
-const water = new Product("water can", "images/water-can.jpg");
-const wine = new Product("wine glass", "images/wine-glass.jpg");
+const bag = new Product("bag", "image/bag.jpg");
+const banana = new Product("banana", "image/banana.jpg");
+const bathroom = new Product("bathroom", "image/bathroom.jpg");
+const boots = new Product("boots", "image/boots.jpg");
+const breakfast = new Product("breakfast", "image/breakfast.jpg");
+const bubblegum = new Product("bubblegum", "image/bubblegum.jpg");
+const chair = new Product("chair", "image/chair.jpg");
+const chtulhu = new Product("chtulhu", "image/chtulhu.jpg");
+const dog = new Product("dog duck", "image/dog-duck.jpg");
+const dragon = new Product("dragon", "image/dragon.jpg");
+const pen = new Product("pen", "image/pen.jpg");
+const pet = new Product("pet Sweep", "image/pet-sweep.jpg");
+const scissors = new Product("scissors", "image/scissors.jpg");
+const shark = new Product("shark", "image/shark.jpg");
+const sweep = new Product("Sweep", "image/sweep.png");
+const tauntaun = new Product("tauntaun", "image/tauntaun.jpg");
+const unicorn = new Product("unicorn", "image/unicorn.jpg");
+const water = new Product("water can", "image/water-can.jpg");
+const wine = new Product("wine glass", "image/wine-glass.jpg");
 
 renderProducts();
+
+productContainer.addEventListener("click", handleProductClick);
