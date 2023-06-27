@@ -1,0 +1,29 @@
+* {
+    background-color: yellow;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: yellowgreen;
+    text-align: center;
+    border: 1px solid black;
+}
+
+main {
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    ;
+
+}
+
+section {
+    border: 1px solid black;
+    text-align: center;
+}
+
+footer {
+    background-color: yellowgreen;
+    border: 1px solid black;
+}

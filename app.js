@@ -8,7 +8,7 @@ const image2 = document.querySelector("section img:nth-child(2)");
 const image3 = document.querySelector("section img:nth-child(3)");
 
 let clicks = 0;
-const maxClicksAllowed = 9;
+const maxClicksAllowed = 5;
 
 let allProducts = [];
 
@@ -30,7 +30,7 @@ function renderProducts() {
     let product3 = getRandomNumber();
 
     while (product1 === product2 || product3) {
-        produnt2 && product3; getRandomNumber();
+        product2 && product3; getRandomNumber();
     }
 
     image1.src = allProducts[product1].src;
@@ -46,7 +46,7 @@ function renderProducts() {
 
 function handleProductClick(event) {
     if (event.target === productContainer) {
-        alert("Please click on a image.")
+        alert("Please click on an image.")
     } else {
         clicks++;
         let clickedProduct = event.target.alt;
@@ -92,8 +92,10 @@ const pen = new Product("pen", "images/pen.jpg");
 const pet = new Product("pet sweep", "images/pet-sweep.jpg");
 const scissors = new Product("scissors", "images/scissors.jpg");
 const shark = new Product("shark", "images/shark.jpg");
-const sweep = new Product("Sweater", "images/sweep-goat.jpg");
+const sweep = new Product("Sweep", "images/sweep-goat.jpg");
 const tauntaun = new Product("tauntaun", "images/tauntaun.jpg");
 const unicorn = new Product("unicorn", "images/unicorn.jpg");
 const water = new Product("water can", "images/water-can.jpg");
 const wine = new Product("wine glass", "images/wine-glass.jpg");
+
+renderProducts();
