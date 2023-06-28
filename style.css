@@ -1,29 +1,38 @@
 * {
-    background-color: yellow;
+
     box-sizing: border-box;
 }
 
 header {
-    background-color: yellowgreen;
+    background-color: green;
     text-align: center;
     border: 1px solid black;
-
+    width: 90%;
+    margin: auto;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-}
-
-section {
+    grid-template-rows: 100px 200px 100px;
+    width: 90%;
+    margin: auto;
     border: 1px solid black;
+    background-color: yellow
 }
 
-section {
-    
-   
+.text1 {
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: auto;
+}
+
+
+.images {
+
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -31,28 +40,45 @@ section {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: green;
 
 }
 
 img {
-    max-width: 30%;
-    display: block;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    display: inline;
+    border: 1px solid black;
+    margin: auto;
 }
 
-div{
+button {
+    display: block;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.seeResults {
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 4;
-    text-align: center;
+
 }
 
-canvas{
-    width: 75%;
-    height: 500px;
+.theResults {
+    background-color: green
 }
+
+
+
+
 
 footer {
-    background-color: yellowgreen;
+    background-color: green;
     border: 1px solid black;
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }

@@ -1,11 +1,11 @@
 "use strict"
 console.log("Odd Duck Times");
 
-const productContainer = document.querySelector("section");
+const productContainer = document.querySelector(".images");
 const resultsButton = document.querySelector("section+div");
-const image1 = document.querySelector("section img:first-child");
-const image2 = document.querySelector("section img:nth-child(2)");
-const image3 = document.querySelector("section img:nth-child(3)");
+const image1 = document.querySelector(".images img:first-child");
+const image2 = document.querySelector(".images img:nth-child(2)");
+const image3 = document.querySelector(".images img:nth-child(3)");
 
 let clicks = 0;
 const maxClicksAllowed = 5;
@@ -67,7 +67,7 @@ function handleProductClick(event) {
         if (clicks === maxClicksAllowed) {
             productContainer.removeEventListener("click", handleProductClick);
             productContainer.className = "no-voting";
-            resultsButton.addEventListener("click", renderResults);
+            resultsButton.addEventListener("click", renderChart);
             resultsButton.className = "clicks allowed";
 
         } else {
